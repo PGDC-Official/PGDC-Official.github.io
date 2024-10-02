@@ -10,12 +10,13 @@ import {
   ListItem,
   ListItemButton,
 } from "@mui/joy";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import PushButton from "components/PushButton";
 import logo from "assets/logo.jpg";
 import { useMediaQuery } from "@mui/material";
 import { Close } from "@mui/icons-material";
+import DrawerList from "./DrawerList";
 
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -31,29 +32,8 @@ function Header() {
     setDrawerOpen(open);
   };
 
-  const drawerList = () => (
-    <Box role="presentation">
-      <Box sx={{ display: "flex", justifyContent: "flex-end", padding: "8px" }}>
-        <PushButton onClick={toggleDrawer(false)}>
-          <Close />
-        </PushButton>
-      </Box>
-      <List>
-        {["Home", "About Us", "Projects", "Blog", "Contact"].map((text) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <Link to={`/${text.toLowerCase().replace(" ", "-")}`}>
-                <Typography variant="body1">{text}</Typography>
-              </Link>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
   return (
-    <>
+    <nav>
       <Sheet
         sx={{
           padding: "8px 16px",
@@ -121,11 +101,12 @@ function Header() {
 
       {/* Drawer for Mobile Menu */}
       {isMobile && (
-        <Drawer open={drawerOpen} onClose={toggleDrawer(false)}>
-          {drawerList()}
+        <Drawer open={drawerOpen} onClose={toggleDrawer(false)}
+        >
+          <DrawerList toggleDrawer={toggleDrawer} />
         </Drawer>
       )}
-    </>
+    </nav>
   );
 }
 
