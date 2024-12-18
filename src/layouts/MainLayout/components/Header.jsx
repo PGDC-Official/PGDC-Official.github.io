@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { PATHS } from "../../../routes";
 import Button from "../../../components/Button";
@@ -35,18 +34,16 @@ function Header() {
           }}
         >
           <li>
-            <NavLink to={PATHS.HOME} exact>
-              <Button>Home</Button>
-            </NavLink>
+            <Button>Home</Button>
           </li>
           <li>
-            <Button>About</Button>
+            <Button>About Us</Button>
           </li>
           <li>
-            <Button>Contact</Button>
+            <Button>News</Button>
           </li>
           <li>
-            <Button>Posts</Button>
+            <Button>Events</Button>
           </li>
         </ul>
       </nav>

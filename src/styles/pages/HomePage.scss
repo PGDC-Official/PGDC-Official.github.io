@@ -1,0 +1,22 @@
+.main-content-container {
+  padding-top: 80px;
+  flex: 1;
+  
+  .home-page {
+    .carousel {
+      max-height: 550px;
+      &-item {
+        max-height: 550px;
+      }
+
+      .slick-dots {
+        li.slick-active {
+          button {
+            height: 4px;
+            background: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+  }
+}
