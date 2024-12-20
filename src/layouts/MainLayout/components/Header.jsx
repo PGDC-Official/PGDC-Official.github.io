@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { PATHS } from "../../../routes";
 import Button from "../../../components/Button";
 import pgdcLogo from "../../../assets/logo.jpg";

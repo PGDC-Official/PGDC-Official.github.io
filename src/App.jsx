@@ -1,7 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { PATHS } from "./routes";
-import HomePage from "./pages/HomePage";
+import React from "react";
+
+const HomePage = React.lazy(() => import("./pages/HomePage"));
 
 function App() {
   return (

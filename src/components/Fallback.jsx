@@ -1,8 +1,8 @@
-import React from 'react'
+import { Spin } from "antd"
 
 function Fallback() {
   return (
-    <div>Fallback</div>
+    <Spin />
   )
 }
 
