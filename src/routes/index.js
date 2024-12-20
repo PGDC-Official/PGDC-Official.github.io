@@ -1,4 +1,4 @@
-const BASE = "/PGDC-Official.github.io"
+const BASE = "/"
 
 export const PATHS = {
   HOME: `${BASE}`,
