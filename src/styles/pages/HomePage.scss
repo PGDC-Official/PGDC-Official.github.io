@@ -1,0 +1,133 @@
+.main-content-container {
+  padding-top: 80px;
+  flex: 1;
+
+  .home-page {
+    .carousel {
+      max-height: 550px;
+      &-item {
+        max-height: 550px;
+      }
+
+      .slick-dots {
+        li.slick-active {
+          button {
+            height: 4px;
+            background: rgba(0, 0, 0, 0.6);
+          }
+        }
+      }
+    }
+
+    .section {
+      display: flex;
+      padding: 40px 0;
+      gap: 40px;
+      max-width: 1440px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      &-item {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        &.content-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 40px;
+          h2 {
+            text-align: right;
+          }
+
+          p {
+            display: flex;
+            align-self: flex-end;
+            text-align: left;
+            max-width: 600px;
+          }
+        }
+      }
+
+      &.services,
+      &.founders,
+      &.community {
+        flex-direction: column;
+
+        .section-item {
+          justify-content: center;
+          gap: 50px;
+          width: 100%;
+          flex-wrap: wrap;
+          .service-item,
+          .founder-item,
+          .community-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            img {
+              width: 200px;
+              height: 200px;
+            }
+
+            p {
+              max-width: 400px;
+            }
+
+            .founder-social {
+              display: flex;
+              gap: 12px;
+            }
+          }
+
+          .community-item {
+            position: relative;
+            background: rgba(190, 190, 190, 0.6);
+            padding: 20px;
+            width: 500px;
+            border-radius: 10px;
+            margin-top: 20px;
+            &-count {
+              position: absolute;
+              font-size: 96px;
+              top: 0;
+              left: 20px;
+              transform: translateY(-50%);
+              font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+            }
+            &-content {
+              display: flex;
+              flex-direction: row;
+              gap: 20px;
+              justify-content: space-between;
+              width: 100%;
+
+              h3 {
+                font-size: 48px;
+                display: flex;
+                align-self: center;
+              }
+            }
+          }
+
+          &.founders-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+            &-center {
+              // center the item in the grid if there is only one item
+              grid-template-columns: 1fr;
+            }
+          }
+        }
+      }
+    }
+  }
+}

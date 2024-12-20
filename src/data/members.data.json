@@ -1,0 +1,42 @@
+{
+  "founders": [
+    {
+      "name": "John Doe",
+      "role": "Founder",
+      "image": "https://placehold.co/200x200",
+      "links": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "name": "Github",
+          "url": "https://www.github.com",
+          "icon": "github"
+        }
+      ]
+      
+    }
+  ],
+
+  "members": [
+    {
+      "name": "Jane Doe",
+      "role": "Member",
+      "image": "https://placehold.co/200x200",
+      "links": [
+        {
+          "name": "Facebook",
+          "url": "https://www.facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "name": "Github",
+          "url": "https://www.github.com",
+          "icon": "github"
+        }
+      ]
+    }
+  ]
+}
