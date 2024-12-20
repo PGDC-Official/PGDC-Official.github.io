@@ -1,5 +1,7 @@
-import { Carousel } from "antd";
+import { Avatar, Carousel, Tooltip } from "antd";
 import carouselData from "../../data/carousel.data.json";
+import { RiFacebookCircleFill, RiGithubFill } from "react-icons/ri";
+import membersData from "../../data/members.data.json";
 
 function HomePage() {
   return (
@@ -7,7 +9,7 @@ function HomePage() {
       <Carousel
         arrows
         infinite={true}
-        autoplay={false}
+        autoplay={true}
         autoplaySpeed={3000}
         className="carousel"
       >
@@ -66,10 +68,68 @@ function HomePage() {
 
       <section className="section founders">
         <h2>
-          Our Founders
+          {
+            membersData.founders.length === 1 ?
+              "Our Founder" :
+              "Our Founders"
+          }
         </h2>
+        <div className={`section-item founders-list ${membersData.founders.length === 1 ? "founders-list-center" : ""}`}>
+          {Array.from(membersData.founders).map((item, index) => (
+            <div key={index} className={`founder-item`} >
+              <Avatar size={200} src={item.image} />
+              <h3>{item.name}</h3>
+              <p>{item.role}</p>
+              <div className="founder-social">
+                {Array.from(item.links).map((link, index) => {
+                  switch (link.icon) {
+                    case "facebook":
+                      return (
+                        <Tooltip key={index} title={link.name} placement="bottom">
+                          <a href={link.url} target="_blank" rel="noreferrer">
+                            <RiFacebookCircleFill size={25} />
+                          </a>
+                        </Tooltip>
+                      );
+                    case "github":
+                      return (
+                        <Tooltip key={index} title={link.name} placement="bottom">
+                          <a href={link.url} target="_blank" rel="noreferrer">
+                            <RiGithubFill size={25} />
+                          </a>
+                        </Tooltip>
+                      );
+                    default:
+                      return null;
+                  }
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {
+        // TODO: Maybe add members section here
+      }
+
+      <section className="section community">
+        <h2>Community</h2>
         <div className="section-item">
-          
+          <div className="community-item">
+            <p className="community-item-count">200+</p> {/* Memebers count */}
+            <div className="community-item-content">
+              <h3>Members</h3>
+              <img src="https://placehold.co/100x100" alt="Members" /> {/* TODO: Icon here */}
+            </div>
+          </div>
+          <div className="community-item">
+            <p className="community-item-count">500+</p> {/* Something count */}
+            <div className="community-item-content">
+              <h3>Members</h3> {/* Something title */}
+              <img src="https://placehold.co/100x100" alt="Members" /> {/* TODO: Icon here */}
+            </div>
+          </div>
         </div>
       </section>
     </div>
