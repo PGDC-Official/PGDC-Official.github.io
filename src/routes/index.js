@@ -1,4 +1,6 @@
+const BASE = "/PGDC-Official.github.io"
+
 export const PATHS = {
-  HOME: "/",
+  HOME: `${BASE}`,
   NOT_FOUND: "*"
 }
