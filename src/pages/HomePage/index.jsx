@@ -1,4 +1,4 @@
-import { Avatar, Carousel, Tooltip } from "antd";
+import { Avatar, Carousel, Divider, Tooltip } from "antd";
 import carouselData from "../../data/carousel.data.json";
 import { RiFacebookCircleFill, RiGithubFill } from "react-icons/ri";
 import membersData from "../../data/members.data.json";
