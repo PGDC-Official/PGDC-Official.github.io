@@ -32,9 +32,7 @@ function Header() {
           <img
             src={pgdcLogo}
             alt="Logo"
-            style={{
-              width: "80px",
-            }}
+            className="navbar-logo"
           />
         </Link>
         <ul className="navbar-items">

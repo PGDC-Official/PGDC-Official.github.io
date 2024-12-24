@@ -9,7 +9,11 @@ header {
     padding: 10px 20px;
     margin: 0 auto;
 
-    .navbar-items {
+    &-logo {
+      width: 80px;
+    }
+
+    &-items {
       display: flex;
       gap: 1rem;
       list-style: none;
@@ -26,12 +30,15 @@ header {
 
     @media (max-width: 992px) {
       max-width: 768px;
+      &-logo {
+        width: 60px;
+      }
     }
   }
 
   @media (max-width: 768px) {
     .navbar {
-      .navbar-items {
+      &-items {
         display: none;
       }
     }

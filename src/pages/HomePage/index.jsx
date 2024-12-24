@@ -11,7 +11,7 @@ function HomePage() {
         <Carousel
           arrows
           infinite={true}
-          autoplay={true}
+          // autoplay={true}
           autoplaySpeed={3000}
           className="carousel"
         >
@@ -24,6 +24,23 @@ function HomePage() {
             />
           ))}
         </Carousel>
+
+        <section className="section" style={{
+          height: "720px",
+          width: "1280px"
+        }}>
+          <iframe
+          style={{
+            width: "100%",
+          }}
+            allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"
+            src="https://tailuge.github.io/billiards/dist/"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            allowFullScreen={true}
+            id="game_drop"
+          ></iframe>
+        </section>
 
         <section className="section about-us">
           <div className="section-item image-wrapper">
