@@ -40,7 +40,7 @@ function Header() {
             <Button>Home</Button>
           </li>
           <li>
-            <Button>About Us</Button>
+            <Button>About</Button>
           </li>
           <li>
             <Button>News</Button>
@@ -65,7 +65,7 @@ function Header() {
             <Button>Home</Button>
           </li>
           <li>
-            <Button>About Us</Button>
+            <Button>About</Button>
           </li>
           <li>
             <Button>News</Button>

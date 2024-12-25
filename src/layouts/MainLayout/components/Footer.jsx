@@ -15,7 +15,7 @@ function Footer() {
         padding: "1rem",
       }}
     >
-      <nav className="navbar footer">
+      <nav className="navbar-footer">
         <div>
           <img
             src={pgdcLogo}

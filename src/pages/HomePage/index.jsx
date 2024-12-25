@@ -25,7 +25,7 @@ function HomePage() {
           ))}
         </Carousel>
 
-        <section className="section" style={{
+        {/* <section className="section" style={{
           height: "720px",
           width: "1280px"
         }}>
@@ -40,7 +40,7 @@ function HomePage() {
             allowFullScreen={true}
             id="game_drop"
           ></iframe>
-        </section>
+        </section> */}
 
         <section className="section about-us">
           <div className="section-item image-wrapper">
@@ -152,16 +152,41 @@ function HomePage() {
                 {/* TODO: Icon here */}
               </div>
             </div>
+
             <div className="community-item">
-              <p className="community-item-count">500+</p>{" "}
-              {/* Something count */}
+              <p className="community-item-count">200+</p>{" "}
+              {/* Memebers count */}
               <div className="community-item-content">
-                <h3>Members</h3> {/* Something title */}
+                <h3>Members</h3>
                 <img src="https://placehold.co/100x100" alt="Members" />{" "}
                 {/* TODO: Icon here */}
               </div>
             </div>
+
+            <div
+            style={{
+              padding: "1rem",
+              display: "block",
+              width: "100%",
+            }}
+          >
+            <div className="members-list">
+              <div className="horizontal-auto-scroll">
+                {Array.from({ length: 20 }).map((_, index) => (
+                  <Avatar
+                    key={index}
+                    src="https://placehold.co/100x100"
+                    style={{
+                      marginRight: "1rem",
+                    }}
+                    className="member-avatar"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
+          </div>
+          
         </section>
       </div>
     </Suspense>
