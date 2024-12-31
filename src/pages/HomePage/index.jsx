@@ -4,6 +4,7 @@ import { RiFacebookCircleFill, RiGithubFill } from "react-icons/ri";
 import membersData from "../../data/members.data.json";
 import { Suspense } from "react";
 import Fallback from "../../components/Fallback";
+import image from "../../assets/trananhtu.jpg"
 function HomePage() {
   return (
     <Suspense fallback={<Fallback />}>
@@ -66,7 +67,7 @@ function HomePage() {
         </section>
 
         <section className="section services">
-          <h2>Our Services</h2>
+          <h2>Our Activites</h2>
           <div className="section-item">
             {Array.from({ length: 5 }).map((_, index) => (
               <div key={index} className="service-item">
@@ -87,7 +88,7 @@ function HomePage() {
 
         <section className="section founders">
           <h2>
-            {membersData.founders.length === 1 ? "Our Founder" : "Our Founders"}
+            {membersData.founders.length === 1 ? "Our Leader" : "Our Leaders"}
           </h2>
           <div
             className={`section-item founders-list ${
@@ -97,6 +98,7 @@ function HomePage() {
             {Array.from(membersData.founders).map((item, index) => (
               <div key={index} className={`founder-item`}>
                 <Avatar size={200} src={item.image} />
+                {/* <img src={item.image} alt={item.name} /> */}
                 <h3>{item.name}</h3>
                 <p>{item.role}</p>
                 <div className="founder-social">
@@ -172,14 +174,29 @@ function HomePage() {
           >
             <div className="members-list">
               <div className="horizontal-auto-scroll">
-                {Array.from({ length: 20 }).map((_, index) => (
+                {Array.from({length: 30}).map((item, index) => (
                   <Avatar
                     key={index}
-                    src="https://placehold.co/100x100"
+                    src={image}
                     style={{
                       marginRight: "1rem",
                     }}
                     className="member-avatar"
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="partners-list">
+              <div className="horizontal-auto-scroll reversed">
+                {Array.from({length: 4}).map((item, index) => (
+                  <Avatar
+                    key={index}
+                    src={image}
+                    style={{
+                      marginRight: "1rem",
+                    }}
+                    className="member-avatar large"
                   />
                 ))}
               </div>

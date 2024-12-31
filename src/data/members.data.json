@@ -2,8 +2,8 @@
   "founders": [
     {
       "name": "John Doe",
-      "role": "Founder",
-      "image": "https://placehold.co/200x200",
+      "role": "Founder / Game Developer",
+      "image": "/src/assets/trananhtu.jpg",
       "links": [
         {
           "name": "Facebook",
@@ -24,7 +24,7 @@
     {
       "name": "Jane Doe",
       "role": "Member",
-      "image": "https://placehold.co/200x200",
+      "image": "/src/assets/trananhtu.jpg",
       "links": [
         {
           "name": "Facebook",

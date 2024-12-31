@@ -124,8 +124,10 @@
           }
         }
       }
-
-      .members-list {
+      .partners-list {
+        margin-top: 20px;
+      }
+      .members-list, .partners-list {
         position: relative;
         overflow-x: hidden;
         white-space: nowrap;
@@ -138,13 +140,21 @@
           overflow: hidden;
           white-space: nowrap;
           animation-name: scroll;
-          animation-duration: 15s;
+          animation-duration: 30s;
           animation-iteration-count: infinite;
           animation-timing-function: linear;
+
+          &.reversed {
+            animation-direction: reverse;
+          }
 
           .member-avatar {
             width: 180px;
             height: 180px;
+            &.large {
+              width: 200px;
+              height: 200px;
+            }
           }
         }
       }
@@ -231,6 +241,11 @@
             .member-avatar {
               width: 120px;
               height: 120px;
+
+              &.large {
+                width: 200px;
+                height: 200px;
+              }
             }
           }
         }
