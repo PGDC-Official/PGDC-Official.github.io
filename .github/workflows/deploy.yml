@@ -24,6 +24,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Set custom domain
+        run: echo 'phenikaadevgame.com' > ./dist/CNAME
+
       - name: List dist contents
         run: ls -la ./dist
 
