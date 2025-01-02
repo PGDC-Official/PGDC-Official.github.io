@@ -115,12 +115,12 @@ function Footer() {
 
       <Divider
         style={{
-          minWidth: "600px",
-          width: "600px",
+          
           margin: "0 auto",
           borderBlockStartColor: "#000",
           borderBlockStartWidth: "2px",
         }}
+        className="footer-divider"
       />
 
       <p
@@ -133,6 +133,7 @@ function Footer() {
           fontFamily:
             "'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif",
         }}
+        className="footer-copyright"
       >
         &copy; 2024 Phenikaa Game Development Club. All rights reserved.
       </p>

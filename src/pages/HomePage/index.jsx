@@ -192,10 +192,11 @@ function HomePage() {
               </div> */}
 
                 <Carousel
-                  arrows
+                  // arrows
                   infinite={true}
                   autoplaySpeed={10000}
-                  dots={false}
+                  autoplay
+                  dots={true}
                   nextArrow={
                     <RiArrowRightSLine color="#000" size={50} fontSize={50} />
                   }
@@ -203,12 +204,15 @@ function HomePage() {
                     <RiArrowLeftSLine color="#000" size={50} fontSize={50} />
                   }
                 >
-                  {Array.from({ length: 20 }).map((item, index) => (
-                    <div key={index}>
-                      {
-                        // group of 5 members here
-
-                        Array.from({ length: 5 }).map((item, index) => (
+                  {
+                    // group of 5 members per slide get from membersData.members
+                    Array.from({
+                      length: Math.ceil(membersData.members.length / 4),
+                    }).map((_, index) => (
+                      <div key={index}>
+                        {Array.from(
+                          membersData.members.slice(index * 4, index * 4 + 4)
+                        ).map((item, index) => (
                           <div key={index} className="member-item">
                             <Avatar
                               key={index}
@@ -216,8 +220,8 @@ function HomePage() {
                               style={{}}
                               className="member-avatar"
                             />
-                            <h3>John Doe</h3>
-                            <p>Member</p>
+                            <h3>{item.name}</h3>
+                            <p>{item.role}</p>
                             <div className="member-social">
                               <Tooltip
                                 key={index}
@@ -240,10 +244,10 @@ function HomePage() {
                               </Tooltip>
                             </div>
                           </div>
-                        ))
-                      }
-                    </div>
-                  ))}
+                        ))}
+                      </div>
+                    ))
+                  }
                 </Carousel>
               </div>
 

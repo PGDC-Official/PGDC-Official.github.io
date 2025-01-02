@@ -62,4 +62,32 @@
       font-size: 24px;
     }
   }
+
+  .footer-divider {
+    min-width: 600px;
+    width: 600px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100dvw;
+
+    .footer-newsletter {
+      width: 100%;
+    }
+
+    .footer-contact,
+    .footer-social {
+      width: 100%;
+      justify-content: center;
+      p {
+        font-size: 12px;
+      }
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+    }
+  }
 }

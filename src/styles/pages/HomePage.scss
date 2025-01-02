@@ -169,6 +169,21 @@
           transform: translate(50%, -50%);
         }
 
+        .slick-dots {
+          bottom: -15px;
+          li {
+            button {
+              background : rgba(61, 61, 61, 0.8);
+            }
+          }
+          li.slick-active {
+            button {
+              height: 4px;
+              background: rgba(0, 0, 0, 0.6);
+            }
+          }
+        }
+
         .slick-slide {
           & > div, & > div > div {
             display: flex!important;
@@ -228,6 +243,7 @@
       }
 
       &.community {
+        max-width: 100dvw;
         .section-item {
           justify-content: center;
           gap: 20px;
@@ -271,8 +287,8 @@
 
         }
         .members-list {
-          height: 400px;
-          max-height: 600px;
+          height: 100dvh;
+          max-height: 700px;
           .horizontal-auto-scroll {
           }
           .member-avatar {
