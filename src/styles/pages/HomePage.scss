@@ -288,9 +288,31 @@
         }
         .members-list {
           height: 100dvh;
-          max-height: 700px;
+          max-height: 300px;
           .horizontal-auto-scroll {
           }
+          .member-avatar {
+            width: 120px!important;
+            height: 120px;
+
+            &.large {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          .slick-prev, .slick-next {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      &.community {
+        .members-list {
+          height: 100dvh;
+          max-height: 500px;
           .member-avatar {
             width: 120px!important;
             height: 120px;
