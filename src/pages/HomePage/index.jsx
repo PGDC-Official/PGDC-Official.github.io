@@ -1,10 +1,15 @@
 import { Avatar, Carousel, Divider, Tooltip } from "antd";
 import carouselData from "../../data/carousel.data.json";
-import { RiFacebookCircleFill, RiGithubFill } from "react-icons/ri";
+import {
+  RiArrowLeftSLine,
+  RiArrowRightSLine,
+  RiFacebookCircleFill,
+  RiGithubFill,
+} from "react-icons/ri";
 import membersData from "../../data/members.data.json";
 import { Suspense } from "react";
 import Fallback from "../../components/Fallback";
-import image from "../../assets/trananhtu.jpg"
+import image from "../../assets/trananhtu.jpg";
 function HomePage() {
   return (
     <Suspense fallback={<Fallback />}>
@@ -166,44 +171,98 @@ function HomePage() {
             </div>
 
             <div
-            style={{
-              padding: "1rem",
-              display: "block",
-              width: "100%",
-            }}
-          >
-            <div className="members-list">
-              <div className="horizontal-auto-scroll">
+              style={{
+                padding: "1rem",
+                display: "block",
+                width: "100%",
+              }}
+            >
+              <div className="members-list">
+                {/* <div className="horizontal-auto-scroll">
                 {Array.from({length: 30}).map((item, index) => (
                   <Avatar
                     key={index}
-                    src={image}
+                    src="https://placehold.co/100x100"
                     style={{
                       marginRight: "1rem",
                     }}
                     className="member-avatar"
                   />
                 ))}
-              </div>
-            </div>
+              </div> */}
 
-            <div className="partners-list">
-              <div className="horizontal-auto-scroll reversed">
-                {Array.from({length: 4}).map((item, index) => (
-                  <Avatar
-                    key={index}
-                    src={image}
-                    style={{
-                      marginRight: "1rem",
-                    }}
-                    className="member-avatar large"
-                  />
-                ))}
+                <Carousel
+                  arrows
+                  infinite={true}
+                  autoplaySpeed={10000}
+                  dots={false}
+                  nextArrow={
+                    <RiArrowRightSLine color="#000" size={50} fontSize={50} />
+                  }
+                  prevArrow={
+                    <RiArrowLeftSLine color="#000" size={50} fontSize={50} />
+                  }
+                >
+                  {Array.from({ length: 20 }).map((item, index) => (
+                    <div key={index}>
+                      {
+                        // group of 5 members here
+
+                        Array.from({ length: 5 }).map((item, index) => (
+                          <div key={index} className="member-item">
+                            <Avatar
+                              key={index}
+                              src="https://placehold.co/100x100"
+                              style={{}}
+                              className="member-avatar"
+                            />
+                            <h3>John Doe</h3>
+                            <p>Member</p>
+                            <div className="member-social">
+                              <Tooltip
+                                key={index}
+                                title="Facebook"
+                                placement="bottom"
+                              >
+                                <a href="#" target="_blank" rel="noreferrer">
+                                  <RiFacebookCircleFill size={25} />
+                                </a>
+                              </Tooltip>
+
+                              <Tooltip
+                                key={index}
+                                title="Github"
+                                placement="bottom"
+                              >
+                                <a href="#" target="_blank" rel="noreferrer">
+                                  <RiGithubFill size={25} />
+                                </a>
+                              </Tooltip>
+                            </div>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  ))}
+                </Carousel>
               </div>
+
+              {/* <div className="partners-list">
+                <div className="horizontal-auto-scroll reversed">
+                  {Array.from({ length: 4 }).map((item, index) => (
+                    <Avatar
+                      key={index}
+                      src="https://placehold.co/100x100"
+                      style={{
+                        marginRight: "1rem",
+                      }}
+                      className="member-avatar large"
+                    />
+                  ))}
+                </div>
+              </div> */}
             </div>
           </div>
-          </div>
-          
         </section>
       </div>
     </Suspense>

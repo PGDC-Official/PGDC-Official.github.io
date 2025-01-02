@@ -24,7 +24,7 @@
     {
       "name": "Jane Doe",
       "role": "Member",
-      "image": "/src/assets/trananhtu.jpg",
+      "image": "https://placehold.co/100x100",
       "links": [
         {
           "name": "Facebook",

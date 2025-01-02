@@ -77,9 +77,14 @@
             max-width: 400px;
           }
 
-          .founder-social {
+          .founder-social, .member-social {
             display: flex;
             gap: 12px;
+
+            a {
+              color: #000;
+              font-size: 24px;
+            }
           }
         }
 
@@ -131,7 +136,7 @@
         position: relative;
         overflow-x: hidden;
         white-space: nowrap;
-        height: 200px;
+        height: 300px;
         width: 100%;
 
         .horizontal-auto-scroll {
@@ -148,13 +153,33 @@
             animation-direction: reverse;
           }
 
-          .member-avatar {
-            width: 180px;
-            height: 180px;
-            &.large {
-              width: 200px;
-              height: 200px;
-            }
+        }
+
+        .slick-prev, .slick-next {
+          width: 32px;
+          height: 32px;
+        }
+
+        .slick-slide {
+          & > div, & > div > div {
+            display: flex!important;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+        .member-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 180px;
+        }
+        .member-avatar {
+          width: 100%!important;
+          height: 180px;
+          &.large {
+            width: 200px!important;
+            height: 200px;
           }
         }
       }
@@ -238,14 +263,14 @@
         .members-list {
           height: 120px;
           .horizontal-auto-scroll {
-            .member-avatar {
-              width: 120px;
-              height: 120px;
+          }
+          .member-avatar {
+            width: 120px!important;
+            height: 120px;
 
-              &.large {
-                width: 200px;
-                height: 200px;
-              }
+            &.large {
+              width: 200px;
+              height: 200px;
             }
           }
         }
