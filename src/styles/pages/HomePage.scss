@@ -158,6 +158,15 @@
         .slick-prev, .slick-next {
           width: 32px;
           height: 32px;
+          
+        }
+
+        .slick-prev {
+          transform: translate(-50%, -50%);
+        }
+
+        .slick-next {
+          transform: translate(50%, -50%);
         }
 
         .slick-slide {
@@ -165,6 +174,7 @@
             display: flex!important;
             justify-content: space-evenly;
             align-items: center;
+            flex-wrap: wrap;
           }
         }
         .member-item {
@@ -261,7 +271,8 @@
 
         }
         .members-list {
-          height: 120px;
+          height: 400px;
+          max-height: 600px;
           .horizontal-auto-scroll {
           }
           .member-avatar {
@@ -272,6 +283,10 @@
               width: 200px;
               height: 200px;
             }
+          }
+          .slick-prev, .slick-next {
+            width: 24px;
+            height: 24px;
           }
         }
       }
