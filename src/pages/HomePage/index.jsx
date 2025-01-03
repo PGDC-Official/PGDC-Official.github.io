@@ -7,10 +7,15 @@ import {
   RiGithubFill,
 } from "react-icons/ri";
 import membersData from "../../data/members.data.json";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Fallback from "../../components/Fallback";
-import image from "../../assets/trananhtu.jpg";
+import useViewport from "../../utils/hooks/useViewport";
+
+import services from "../../data/services.data";
 function HomePage() {
+  const viewport = useViewport();
+  const isMobile = viewport.width < 768;
+
   return (
     <Suspense fallback={<Fallback />}>
       <div className="home-page">
@@ -54,38 +59,54 @@ function HomePage() {
           </div>
 
           <div className="section-item content-wrapper">
-            <h2>
+            <h2 className="">
               About Us
               {
                 // TODO: Add some icons or graphics here
               }
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              euismod, nisl eget scelerisque tincidunt, lacus felis aliquet
-              odio, vel tincidunt nunc libero nec nunc. Phasellus nec purus ac
-              nunc ultricies aliquam. Nullam nec nunc nec nunc ultricies
-              aliquam. Nullam nec nunc nec nunc ultricies aliquam. Nullam nec
-              nunc nec nunc ultricies aliquam.
-            </p>
+            <div className="text-justify">
+              <p>
+                {isMobile ? (
+                  <>
+                    <span>
+                      The Phenikaa Game Development Club (PGDC) is a
+                      student-founded
+                    </span>
+                    <span> community at Phenikaa University, dedicated to</span>{" "}
+                    <span>
+                      empowering students in game design and development.
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    The Phenikaa Game Development Club (PGDC) is a
+                    student-founded community at Phenikaa University, dedicated
+                    to empowering students in game design and development.
+                  </>
+                )}
+              </p>
+              <p>
+                Born from a shared passion for creativity and technology, PGDC
+                provides a space for learning, collaboration, and innovation.
+                Through workshops, events, and showcases, we strive to help
+                members turn their ideas into impactful games and connect with
+                the broader game development community.
+              </p>
+            </div>
           </div>
         </section>
 
         <section className="section services">
           <h2>Our Activites</h2>
           <div className="section-item">
-            {Array.from({ length: 5 }).map((_, index) => (
+            {Array.from(services).map((item, index) => (
               <div key={index} className="service-item">
-                <img src="https://placehold.co/200x200" alt="Service" />
-                <h3>Service Name</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  euismod, nisl eget scelerisque tincidunt, lacus felis aliquet
-                  odio, vel tincidunt nunc libero nec nunc. Phasellus nec purus
-                  ac nunc ultricies aliquam. Nullam nec nunc nec nunc ultricies
-                  aliquam. Nullam nec nunc nec nunc ultricies aliquam. Nullam
-                  nec nunc nec nunc ultricies aliquam.
-                </p>
+                <img src={item.icon} alt="Service" />
+                <div>
+                  <h3 className="font-bold text-lg">{item.title}</h3>
+                  <p className="text-sm md:text-center text-start">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -102,8 +123,7 @@ function HomePage() {
           >
             {Array.from(membersData.founders).map((item, index) => (
               <div key={index} className={`founder-item`}>
-                <Avatar size={200} src={item.image} />
-                {/* <img src={item.image} alt={item.name} /> */}
+                <Avatar size={200} src={item.image} alt="Tran Anh Tu" />
                 <h3>{item.name}</h3>
                 <p>{item.role}</p>
                 <div className="founder-social">
@@ -142,10 +162,6 @@ function HomePage() {
             ))}
           </div>
         </section>
-
-        {
-          // TODO: Maybe add members section here
-        }
 
         <section className="section community">
           <h2>Community</h2>
@@ -205,7 +221,7 @@ function HomePage() {
                   }
                 >
                   {
-                    // group of 5 members per slide get from membersData.members
+                    // group of 4 members per slide get from membersData.members
                     Array.from({
                       length: Math.ceil(membersData.members.length / 4),
                     }).map((_, index) => (
@@ -216,8 +232,7 @@ function HomePage() {
                           <div key={index} className="member-item">
                             <Avatar
                               key={index}
-                              src="https://placehold.co/100x100"
-                              style={{}}
+                              src={item.image}
                               className="member-avatar"
                             />
                             <h3>{item.name}</h3>
@@ -250,21 +265,6 @@ function HomePage() {
                   }
                 </Carousel>
               </div>
-
-              {/* <div className="partners-list">
-                <div className="horizontal-auto-scroll reversed">
-                  {Array.from({ length: 4 }).map((item, index) => (
-                    <Avatar
-                      key={index}
-                      src="https://placehold.co/100x100"
-                      style={{
-                        marginRight: "1rem",
-                      }}
-                      className="member-avatar large"
-                    />
-                  ))}
-                </div>
-              </div> */}
             </div>
           </div>
         </section>

@@ -1,11 +1,12 @@
-@use './abstract/variables';
-@use './abstract/base';
-@use './abstract/reset';
-@use './abstract/global';
+@use './abstract/_variables';
+@use './abstract/_base';
+@use './abstract/_reset';
+@use './abstract/_global';
 
 @use './components';
 @use './layouts';
 @use './pages';
 
-
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,11 +1,18 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { PATHS } from "./routes";
-import React from "react";
+import React, { useEffect } from "react";
+import { Modal } from "antd";
 
 const HomePage = React.lazy(() => import("./pages/HomePage"));
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    Modal.destroyAll();
+  }, [location]);
+  
   return (
     <Routes>
       <Route path={PATHS.HOME} element={<MainLayout />}>

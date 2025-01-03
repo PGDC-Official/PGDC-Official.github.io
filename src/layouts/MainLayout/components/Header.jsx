@@ -4,7 +4,7 @@ import Button from "../../../components/Button";
 import pgdcLogo from "../../../assets/logo.jpg";
 import { RiMenuLine, RiCloseFill } from "react-icons/ri";
 import { Drawer } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -16,6 +16,20 @@ function Header() {
   const handleCloseDrawer = () => {
     setOpen(false);
   };
+
+  const handleEscapeDrawer = (e) => {
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleEscapeDrawer);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscapeDrawer);
+    }
+  }, []);
 
   return (
     <header
@@ -55,11 +69,7 @@ function Header() {
         </Button>
       </nav>
 
-      <Drawer onClose={handleCloseDrawer} open={open} closeIcon={
-        <Button otherClasses={"menu-button"}>
-          <RiCloseFill size={20} />
-        </Button>
-      }>
+      <Drawer onClose={handleCloseDrawer} open={open}>
         <ul className="drawer-items">
           <li>
             <Button>Home</Button>
