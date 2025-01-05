@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { PATHS } from "../../../routes";
 import Button from "../../../components/Button";
-import pgdcLogo from "../../../assets/logo.jpg";
+import pgdcLogo from "../../../assets/svg/logo_plain_sm_white.svg";
 import { RiMenuLine, RiCloseFill } from "react-icons/ri";
-import { Drawer } from "antd";
+import { Divider, Drawer } from "antd";
 import { useEffect, useState } from "react";
+import useViewport from "../../../utils/hooks/useViewport";
 
 function Header() {
+  const viewport = useViewport();
+  const isMobile = viewport.width < 768;
   const [open, setOpen] = useState(false);
 
   const handleOpenDrawer = () => {
@@ -32,39 +35,46 @@ function Header() {
   }, []);
 
   return (
-    <header
+    <header className="dark"
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: isMobile ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0.9)",
         boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
         position: "fixed",
         width: "100%",
         zIndex: "100",
+        backdropFilter: "blur(20px)"
       }}
     >
       <nav className="navbar">
         <Link to={PATHS.HOME}>
-          <img
-            src={pgdcLogo}
-            alt="Logo"
-            className="navbar-logo"
-          />
+          <img src={pgdcLogo} alt="Logo" className="navbar-logo" />
         </Link>
         <ul className="navbar-items">
           <li>
-            <Button>Home</Button>
+            <Link to={PATHS.HOME} className="text-white uppercase font-bold hover:underline">
+              Home
+            </Link>
           </li>
           <li>
-            <Button>About</Button>
+            <Link to={PATHS.ABOUT} className="text-white uppercase font-bold hover:underline">
+              About
+            </Link>
           </li>
           <li>
-            <Button>News</Button>
+            <Link to={PATHS.NEWS} className="text-white uppercase font-bold hover:underline">
+              News
+            </Link>
           </li>
           <li>
-            <Button>Events</Button>
+            <Link to={PATHS.EVENTS} className="text-white uppercase font-bold hover:underline">
+              Events
+            </Link>
           </li>
         </ul>
 
-        <Button otherClasses={"menu-button"} onClick={handleOpenDrawer}>
+        <Button otherClasses={"menu-button"} onClick={handleOpenDrawer} styles={{
+          color: "white"
+        }}>
           <RiMenuLine size={20} />
         </Button>
       </nav>

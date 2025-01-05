@@ -1,15 +1,26 @@
 .home-page {
   .carousel {
-    max-height: 550px;
+    // max-height: 600px;
     &-item {
-      max-height: 550px;
+      height: 600px;
+      aspect-ratio: 16 / 9;
+
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      // height: 100%;
+
+      @media (max-width: 768px) {
+        height: 300px;
+        aspect-ratio: 4 / 3;
+      }
     }
 
     .slick-dots {
       li.slick-active {
         button {
           height: 4px;
-          background: rgba(0, 0, 0, 0.6);
+          background: #fff;
         }
       }
     }
@@ -57,13 +68,14 @@
 
     &.services {
       .section-item {
-        @apply grid grid-cols-1 md:grid-rows-1 gap-4;
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4;
       }
     }
 
     &.services,
     &.founders,
-    &.community {
+    &.community,
+    &.partners {
       flex-direction: column;
 
       .section-item {
@@ -80,8 +92,8 @@
           text-align: center;
           gap: 10px;
           img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
           }
 
           p {
@@ -93,7 +105,7 @@
             gap: 12px;
 
             a {
-              color: #000;
+              // color: #000;
               font-size: 24px;
             }
           }
@@ -101,7 +113,8 @@
 
         .community-item {
           position: relative;
-          background: rgba(190, 190, 190, 0.6);
+          // background: rgba(190, 190, 190, 0.6);
+          background: #fffaea;
           padding: 20px;
           width: 500px;
           border-radius: 10px;
@@ -130,6 +143,13 @@
           }
         }
 
+        .founder-item {
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
         &.founders-list {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -146,9 +166,8 @@
       .members-list,
       .partners-list {
         position: relative;
-        overflow-x: hidden;
+        overflow: hidden;
         white-space: nowrap;
-        height: 300px;
         width: 100%;
 
         .horizontal-auto-scroll {
@@ -196,12 +215,16 @@
         }
 
         .slick-slide {
-          & > div,
-          & > div > div {
+          & > div {
             display: flex !important;
             justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
+            gap: 10px;
+          }
+
+          & > div > div {
+            @apply grid grid-cols-2 gap-4 items-center justify-items-center #{!important};
           }
         }
         .member-item {
@@ -233,14 +256,11 @@
       padding: 40px 32px;
     }
 
-    @media (max-width: 1280px) {
-    }
-
     @media (max-width: 1024px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px 32px;
+      padding: 32px;
 
       h2 {
         font-size: 36px;
@@ -291,7 +311,6 @@
 
           .community-item {
             position: relative;
-            background: rgba(190, 190, 190, 0.6);
             padding: 20px;
             width: 400px;
             border-radius: 10px;
@@ -319,17 +338,13 @@
               }
 
               img {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
               }
             }
           }
         }
         .members-list {
-          height: 100dvh;
-          max-height: 300px;
-          .horizontal-auto-scroll {
-          }
           .member-avatar {
             width: 120px !important;
             height: 120px;
@@ -349,8 +364,12 @@
     }
 
     @media (max-width: 768px) {
-      padding: 40px 12px;
+      padding: 32px 12px;
       max-width: 768px;
+      &.partners {
+        @apply gap-4;
+      }
+
       &.services {
         .section-item {
           padding-inline: 32px;
@@ -398,8 +417,6 @@
       }
       &.community {
         .members-list {
-          height: 100dvh;
-          max-height: 500px;
           .member-avatar {
             width: 120px !important;
             height: 120px;
@@ -419,19 +436,20 @@
     }
 
     @media (max-width: 640px) {
-      padding: 40px 12px;
+      padding: 20px 12px;
       max-width: 768px;
       &.services {
         .section-item {
-          padding-inline: 16px;
+          padding-inline: 0px;
           .service-item {
             display: flex;
             flex-direction: row;
             gap: 30px;
             justify-content: space-between;
             img {
-              width: 70px;
-              height: 70px;
+              width: 100px;
+              height: 100px;
+              margin-left: 12px;
             }
             h3 {
               text-align: start;
@@ -441,6 +459,25 @@
               max-width: fit-content !important;
               font-size: 11px;
             }
+          }
+        }
+      }
+
+      &.community {
+        .members-list {
+          .member-avatar {
+            width: 120px !important;
+            height: 120px;
+
+            &.large {
+              width: 200px;
+              height: 200px;
+            }
+          }
+          .slick-prev,
+          .slick-next {
+            width: 24px;
+            height: 24px;
           }
         }
       }
