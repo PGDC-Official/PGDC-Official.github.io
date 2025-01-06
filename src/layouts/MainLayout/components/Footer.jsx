@@ -1,6 +1,7 @@
 import { Divider, Form, Input, Tooltip } from "antd";
 import Button from "../../../components/Button";
 import pgdcLogo from "../../../assets/svg/logo_colored_lg.svg";
+import newsletterBg from "../../../assets/newsletter.png";
 import {
   RiExternalLinkFill,
   RiFacebookCircleFill,
@@ -97,13 +98,13 @@ function Footer() {
         </ul>
       </nav>
 
-      <div className="mt-6 newsletter">
+      <div className="mt-6 newsletter" >
         <h2 className="text-2xl font-semibold roboto text-dark-blue">Newsletter</h2>
         <p className="text-sm">
           Subscribe to our newsletter to receive news and updates
         </p>
         <Form
-          className="flex flex-col md:flex-row gap-1 md:gap-1 mt-4"
+          className="flex flex-col md:flex-row gap-2 md:gap-2 mt-4"
         >
           <Form.Item
             style={{
