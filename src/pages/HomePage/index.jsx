@@ -48,7 +48,7 @@ function HomePage() {
         <Carousel
           arrows
           infinite={true}
-          // autoplay={true}
+          autoplay
           autoplaySpeed={3000}
           className="carousel"
         >
