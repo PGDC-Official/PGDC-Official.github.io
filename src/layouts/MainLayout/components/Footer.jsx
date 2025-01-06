@@ -1,7 +1,6 @@
 import { Divider, Form, Input, Tooltip } from "antd";
 import Button from "../../../components/Button";
 import pgdcLogo from "../../../assets/svg/logo_colored_lg.svg";
-import newsletterBg from "../../../assets/newsletter.png";
 import {
   RiExternalLinkFill,
   RiFacebookCircleFill,
