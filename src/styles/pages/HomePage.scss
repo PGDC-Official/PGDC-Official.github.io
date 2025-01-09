@@ -224,7 +224,7 @@
           }
 
           & > div > div {
-            @apply grid grid-cols-2 gap-4 items-center justify-items-center #{!important};
+            @apply grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-items-center #{!important};
           }
         }
         .member-item {
@@ -236,12 +236,8 @@
           gap: 5px;
         }
         .member-avatar {
-          width: 100% !important;
-          height: 180px;
-          &.large {
-            width: 200px !important;
-            height: 200px;
-          }
+          width: 150px;
+          height: 150px;
         }
 
         .member-social {

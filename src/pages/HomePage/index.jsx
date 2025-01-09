@@ -15,10 +15,11 @@ import carousel_2 from "../../assets/01.jpg";
 import carousel_3 from "../../assets/02.jpg";
 import carousel_4 from "../../assets/03.jpg";
 import carousel_5 from "../../assets/04.jpg";
-import appMp from "../../assets/app-mp.png";
 import seminarIcon from "../../assets/seminar.png";
+import logo from "../../assets/svg/logo_plain_sm.svg";
 
 import services from "../../data/services.data";
+import MemberLogo from "../../components/MemberLogo";
 function HomePage() {
   const viewport = useViewport();
   const isMobile = viewport.width < 768;
@@ -41,6 +42,18 @@ function HomePage() {
       alt: "Club's activities",
     },
   ];
+
+  useEffect(() => {
+    // if .member-avatar's child img tag contains .member-avatar-default then add overflow visible to .member-avatar
+    const memberAvatars = document.querySelectorAll(".member-avatar");
+    memberAvatars.forEach((avatar) => {
+      if (avatar.querySelector(".member-avatar-default")) {
+        avatar.style.overflow = "visible";
+      }
+    });
+
+
+  }, []);
 
   return (
     <Suspense fallback={<Fallback />}>
@@ -202,6 +215,9 @@ function HomePage() {
               }}
             >
               <div className="members-list">
+                <p className="text-dark-blue font-bold text-2xl my-4 mt-0">
+                  Game Developers
+                </p>
                 <Carousel
                   arrows
                   infinite={true}
@@ -218,22 +234,41 @@ function HomePage() {
                   {
                     // group of 4 members per slide get from membersData.members
                     Array.from({
-                      length: Math.ceil(membersData.members.length / 4),
+                      length: Math.ceil(
+                        membersData.members.developers.length / 4
+                      ),
                     }).map((_, index) => (
                       <div key={index} className="">
                         {Array.from(
-                          membersData.members.slice(index * 4, index * 4 + 4)
+                          membersData.members.developers.slice(
+                            index * 4,
+                            index * 4 + 4
+                          )
                         ).map((item, index) => (
-                          <div key={index} className="member-item grid grid-cols-1">
+                          <div
+                            key={index}
+                            className="member-item grid grid-cols-1"
+                          >
                             <Avatar
                               key={index}
                               src={item.image}
                               className="member-avatar"
+                              style={{
+                                backgroundColor: "transparent",
+                                color: "#000",
+                              }}
+                              icon={
+                                <img
+                                  src={logo}
+                                  alt="PGDC's member"
+                                  className="member-avatar-default"
+                                  style={{ objectFit: "unset" }}
+                                />
+                              }
                             />
                             <h3 className="font-bold text-dark-blue">
                               {item.name}
                             </h3>
-                            <p>{item.role}</p>
                             <div className="member-social">
                               <Tooltip
                                 key={index}
@@ -247,14 +282,152 @@ function HomePage() {
                                   />
                                 </a>
                               </Tooltip>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ))
+                  }
+                </Carousel>
 
+                <p className="text-dark-blue font-bold text-2xl my-4">
+                  Game Designers
+                </p>
+                <Carousel
+                  arrows
+                  infinite={true}
+                  autoplaySpeed={10000}
+                  autoplay
+                  dots={false}
+                  nextArrow={
+                    <RiArrowRightSLine color="#000" size={50} fontSize={50} />
+                  }
+                  prevArrow={
+                    <RiArrowLeftSLine color="#000" size={50} fontSize={50} />
+                  }
+                >
+                  {
+                    // group of 4 members per slide get from membersData.members
+                    Array.from({
+                      length: Math.ceil(
+                        membersData.members.designers.length / 4
+                      ),
+                    }).map((_, index) => (
+                      <div key={index} className="">
+                        {Array.from(
+                          membersData.members.designers.slice(
+                            index * 4,
+                            index * 4 + 4
+                          )
+                        ).map((item, index) => (
+                          <div
+                            key={index}
+                            className="member-item grid grid-cols-1"
+                          >
+                            <Avatar
+                              key={index}
+                              src={item.image}
+                              className="member-avatar"
+                              style={{
+                                backgroundColor: "transparent",
+                                color: "#000",
+                              }}
+                              icon={
+                                <img
+                                  src={logo}
+                                  alt="PGDC's member"
+                                  className="member-avatar-default"
+                                  style={{ objectFit: "unset", overflow: "auto" }}
+                                />
+                              }
+                            />
+                            <h3 className="font-bold text-dark-blue">
+                              {item.name}
+                            </h3>
+                            <div className="member-social">
                               <Tooltip
                                 key={index}
-                                title="Github"
+                                title="Facebook"
                                 placement="bottom"
                               >
                                 <a href="#" target="_blank" rel="noreferrer">
-                                  <RiGithubFill size={25} color="#1f2328" />
+                                  <RiFacebookCircleFill
+                                    size={25}
+                                    color="#0866ff"
+                                  />
+                                </a>
+                              </Tooltip>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ))
+                  }
+                </Carousel>
+
+                <p className="text-dark-blue font-bold text-2xl my-4">
+                  Event and Media
+                </p>
+                <Carousel
+                  arrows={membersData.members.media.length > 4}
+                  infinite={true}
+                  autoplaySpeed={10000}
+                  autoplay
+                  dots={false}
+                  nextArrow={
+                    <RiArrowRightSLine color="#000" size={50} fontSize={50} />
+                  }
+                  prevArrow={
+                    <RiArrowLeftSLine color="#000" size={50} fontSize={50} />
+                  }
+                >
+                  {
+                    // group of 4 members per slide get from membersData.members
+                    Array.from({
+                      length: Math.ceil(membersData.members.media.length / 4),
+                    }).map((_, index) => (
+                      <div key={index} className="">
+                        {Array.from(
+                          membersData.members.media.slice(
+                            index * 4,
+                            index * 4 + 4
+                          )
+                        ).map((item, index) => (
+                          <div
+                            key={index}
+                            className="member-item grid grid-cols-1"
+                          >
+                            <Avatar
+                              key={index}
+                              src={item.image}
+                              className="member-avatar"
+                              style={{
+                                backgroundColor: "transparent",
+                                color: "#000",
+                              }}
+                              icon={
+                                <img
+                                  src={logo}
+                                  alt="PGDC's member"
+                                  style={{ objectFit: "unset" }}
+                                  className="member-avatar-default"
+                                />
+                              }
+                            />
+                            <h3 className="font-bold text-dark-blue">
+                              {item.name}
+                            </h3>
+                            <div className="member-social">
+                              <Tooltip
+                                key={index}
+                                title="Facebook"
+                                placement="bottom"
+                              >
+                                <a href="#" target="_blank" rel="noreferrer">
+                                  <RiFacebookCircleFill
+                                    size={25}
+                                    color="#0866ff"
+                                  />
                                 </a>
                               </Tooltip>
                             </div>
