@@ -73,7 +73,8 @@ function Header() {
         </ul>
 
         <Button otherClasses={"menu-button"} onClick={handleOpenDrawer} styles={{
-          color: "white"
+          color: "white",
+          borderColor: "white"
         }}>
           <RiMenuLine size={20} />
         </Button>

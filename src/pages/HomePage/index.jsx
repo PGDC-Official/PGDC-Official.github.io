@@ -2,11 +2,13 @@ import { Avatar, Carousel, Divider, Tooltip } from "antd";
 // import carouselData from "../../data/carousel.data.json";
 import {
   RiArrowLeftSLine,
+  RiArrowRightLine,
   RiArrowRightSLine,
   RiFacebookCircleFill,
   RiGithubFill,
 } from "react-icons/ri";
 import membersData from "../../data/members.data.json";
+import partnersData from "../../data/partners.data.json";
 import { Suspense, useEffect } from "react";
 import Fallback from "../../components/Fallback";
 import useViewport from "../../utils/hooks/useViewport";
@@ -17,9 +19,11 @@ import carousel_4 from "../../assets/03.jpg";
 import carousel_5 from "../../assets/04.jpg";
 import seminarIcon from "../../assets/seminar.png";
 import logo from "../../assets/svg/logo_plain_sm.svg";
-
 import services from "../../data/services.data";
-import MemberLogo from "../../components/MemberLogo";
+import Button from "../../components/Button";
+import { PATHS } from "../../routes";
+import { useNavigate } from "react-router-dom";
+
 function HomePage() {
   const viewport = useViewport();
   const isMobile = viewport.width < 768;
@@ -43,16 +47,22 @@ function HomePage() {
     },
   ];
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     // if .member-avatar's child img tag contains .member-avatar-default then add overflow visible to .member-avatar
     const memberAvatars = document.querySelectorAll(".member-avatar");
+    const foundersAvatars = document.querySelectorAll(".founder-avatar");
     memberAvatars.forEach((avatar) => {
       if (avatar.querySelector(".member-avatar-default")) {
         avatar.style.overflow = "visible";
       }
     });
-
-
+    foundersAvatars.forEach((avatar) => {
+      if (avatar.querySelector(".member-avatar-default")) {
+        avatar.style.overflow = "visible";
+      }
+    });
   }, []);
 
   return (
@@ -155,7 +165,24 @@ function HomePage() {
           >
             {Array.from(membersData.founders).map((item, index) => (
               <div key={index} className={`founder-item`}>
-                <Avatar size={200} src={item.image} alt="Tran Anh Tu" />
+                <Avatar
+                  size={200}
+                  src={item.image}
+                  alt="Tran Anh Tu"
+                  style={{
+                    backgroundColor: "transparent",
+                    color: "#000",
+                  }}
+                  className="founder-avatar"
+                  icon={
+                    <img
+                      src={logo}
+                      alt="PGDC's member"
+                      className="member-avatar-default"
+                      style={{ objectFit: "unset" }}
+                    />
+                  }
+                />
                 <h3 className="font-bold text-dark-blue text-xl">
                   {item.name}
                 </h3>
@@ -249,47 +276,45 @@ function HomePage() {
                             key={index}
                             className="member-item grid grid-cols-1"
                           >
-                            <Avatar
+                            <Tooltip
                               key={index}
-                              src={item.image}
-                              className="member-avatar"
-                              style={{
-                                backgroundColor: "transparent",
-                                color: "#000",
-                              }}
-                              icon={
-                                <img
-                                  src={logo}
-                                  alt="PGDC's member"
-                                  className="member-avatar-default"
-                                  style={{ objectFit: "unset" }}
+                              title="Open profile"
+                              placement="bottom"
+                            >
+                              <a
+                                href={item.links[0].url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <Avatar
+                                  key={index}
+                                  src={item.image}
+                                  className="member-avatar"
+                                  style={{
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                  icon={
+                                    <img
+                                      src={logo}
+                                      alt="PGDC's member"
+                                      className="member-avatar-default"
+                                      style={{ objectFit: "unset" }}
+                                    />
+                                  }
                                 />
-                              }
-                            />
+                              </a>
+                            </Tooltip>
                             <h3 className="font-bold text-dark-blue">
                               {item.name}
                             </h3>
-                            <div className="member-social">
-                              <Tooltip
-                                key={index}
-                                title="Facebook"
-                                placement="bottom"
-                              >
-                                <a href="#" target="_blank" rel="noreferrer">
-                                  <RiFacebookCircleFill
-                                    size={25}
-                                    color="#0866ff"
-                                  />
-                                </a>
-                              </Tooltip>
-                            </div>
                           </div>
                         ))}
                       </div>
                     ))
                   }
                 </Carousel>
-
+                <Divider />
                 <p className="text-dark-blue font-bold text-2xl my-4">
                   Game Designers
                 </p>
@@ -324,47 +349,48 @@ function HomePage() {
                             key={index}
                             className="member-item grid grid-cols-1"
                           >
-                            <Avatar
+                            <Tooltip
                               key={index}
-                              src={item.image}
-                              className="member-avatar"
-                              style={{
-                                backgroundColor: "transparent",
-                                color: "#000",
-                              }}
-                              icon={
-                                <img
-                                  src={logo}
-                                  alt="PGDC's member"
-                                  className="member-avatar-default"
-                                  style={{ objectFit: "unset", overflow: "auto" }}
+                              title="Open profile"
+                              placement="bottom"
+                            >
+                              <a
+                                href={item.links[0].url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <Avatar
+                                  key={index}
+                                  src={item.image}
+                                  className="member-avatar"
+                                  style={{
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                  icon={
+                                    <img
+                                      src={logo}
+                                      alt="PGDC's member"
+                                      className="member-avatar-default"
+                                      style={{
+                                        objectFit: "unset",
+                                        overflow: "auto",
+                                      }}
+                                    />
+                                  }
                                 />
-                              }
-                            />
+                              </a>
+                            </Tooltip>
                             <h3 className="font-bold text-dark-blue">
                               {item.name}
                             </h3>
-                            <div className="member-social">
-                              <Tooltip
-                                key={index}
-                                title="Facebook"
-                                placement="bottom"
-                              >
-                                <a href="#" target="_blank" rel="noreferrer">
-                                  <RiFacebookCircleFill
-                                    size={25}
-                                    color="#0866ff"
-                                  />
-                                </a>
-                              </Tooltip>
-                            </div>
                           </div>
                         ))}
                       </div>
                     ))
                   }
                 </Carousel>
-
+                <Divider />
                 <p className="text-dark-blue font-bold text-2xl my-4">
                   Event and Media
                 </p>
@@ -397,40 +423,38 @@ function HomePage() {
                             key={index}
                             className="member-item grid grid-cols-1"
                           >
-                            <Avatar
+                            <Tooltip
                               key={index}
-                              src={item.image}
-                              className="member-avatar"
-                              style={{
-                                backgroundColor: "transparent",
-                                color: "#000",
-                              }}
-                              icon={
-                                <img
-                                  src={logo}
-                                  alt="PGDC's member"
-                                  style={{ objectFit: "unset" }}
-                                  className="member-avatar-default"
+                              title="Open profile"
+                              placement="bottom"
+                            >
+                              <a
+                                href={item.links[0].url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <Avatar
+                                  key={index}
+                                  src={item.image}
+                                  className="member-avatar"
+                                  style={{
+                                    backgroundColor: "transparent",
+                                    color: "#000",
+                                  }}
+                                  icon={
+                                    <img
+                                      src={logo}
+                                      alt="PGDC's member"
+                                      style={{ objectFit: "unset" }}
+                                      className="member-avatar-default"
+                                    />
+                                  }
                                 />
-                              }
-                            />
+                              </a>
+                            </Tooltip>
                             <h3 className="font-bold text-dark-blue">
                               {item.name}
                             </h3>
-                            <div className="member-social">
-                              <Tooltip
-                                key={index}
-                                title="Facebook"
-                                placement="bottom"
-                              >
-                                <a href="#" target="_blank" rel="noreferrer">
-                                  <RiFacebookCircleFill
-                                    size={25}
-                                    color="#0866ff"
-                                  />
-                                </a>
-                              </Tooltip>
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -442,7 +466,12 @@ function HomePage() {
           </div>
         </section>
 
-        <section className="section partners gap-4">
+        <section
+          className="section partners"
+          style={{
+            gap: "1rem",
+          }}
+        >
           <h2 className="font-bold text-dark-blue">Partners</h2>
           <div className="section-item">
             <div
@@ -452,17 +481,16 @@ function HomePage() {
                 width: "100%",
               }}
             >
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-4 gap-4 justify-center items-center justify-items-center">
                 {
                   // group of 4 members per slide get from membersData.members
-                  Array.from({
-                    length: 4,
-                  }).map((_, index) => (
-                    <div key={index} className="">
+                  Array.from(partnersData.partners).map((item, index) => (
+                    <div key={index} className="w-20 md:w-28">
                       <img
                         key={index}
-                        src="https://placehold.co/100x100"
-                        className="member-avatar"
+                        src={item.logo}
+                        className=""
+                        alt={item.name}
                       />
                     </div>
                   ))
@@ -470,8 +498,20 @@ function HomePage() {
               </div>
             </div>
           </div>
+          <Button
+            otherClasses={
+              "w-fit mx-auto font-bold normal-case flex items-center justify-center gap-2"
+            }
+            onClick={() => {
+              navigate(PATHS.PARTNERSHIP_INFO);
+            }}
+          >
+            Partnership Information{" "}
+            <RiArrowRightLine className="inline-block" />
+          </Button>
         </section>
       </div>
+      <input type="search" onChange={(e) => console.log(e.target.value)}/>
     </Suspense>
   );
 }

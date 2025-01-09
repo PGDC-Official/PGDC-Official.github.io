@@ -5,5 +5,6 @@ export const PATHS = {
   ABOUT: `${BASE}about`,
   NEWS: `${BASE}news`,
   EVENTS: `${BASE}events`,
+  PARTNERSHIP_INFO: `${BASE}partnership-infomation`,
   NOT_FOUND: "*"
 }
