@@ -4,5 +4,9 @@
   .main-content-container {
     padding-top: 80px;
     flex: 1;
+
+    @media (max-width: 992px) {
+      padding-top: 60px;
+    }
   }
 }

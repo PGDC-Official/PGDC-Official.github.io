@@ -10,7 +10,7 @@ header {
 
     &-logo {
       color: white;
-      width: 60px;
+      width: 50px;
     }
 
     &-items {
@@ -31,7 +31,7 @@ header {
     @media (max-width: 992px) {
       max-width: 768px;
       &-logo {
-        width: 60px;
+        width: 40px;
       }
     }
   }

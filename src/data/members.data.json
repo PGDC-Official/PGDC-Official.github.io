@@ -9,259 +9,330 @@
           "name": "Facebook",
           "url": "https://www.facebook.com",
           "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
         }
       ]
       
     }
   ],
 
-  "members": [
-    {
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },
-    {
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    },{
-      "name": "Jane Doe",
-      "role": "Member",
-      "image": "https://placehold.co/100x100",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com",
-          "icon": "facebook"
-        },
-        {
-          "name": "Github",
-          "url": "https://www.github.com",
-          "icon": "github"
-        }
-      ]
-    }
-  ]
+  "members": {
+    "developers": [
+      {
+        "name": "Đào Duy Thắng",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Dao%20Duy%20Thang/1671801668273.JPG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/15PqKyXM8u/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Lê Mạnh Tuấn",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Le%20Manh%20Tuan/IMG_20241101_210921.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100015360852366",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Hữu Niên",
+        "role": "Game Developer",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/huunien2004",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Ngọc Hà",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Ngoc%20Ha/454941729_1037907044395319_845040642576934225_n.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/100004893513275/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Quang Huy",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Quang%20Huy/IMG_20240822_210955.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100043098382202&mibextid=ZbWKwL",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Thành Long",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Thanh%20Long/3d5f58dc28894021825f5997e5ab5409.jpeg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/simpleguywithoutbrain/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Tiến Thái",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Tien%20Thai/IMG_3785.JPG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/17kruZeunA/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Văn Hiếu",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Van%20Hieu/avatar_001204051115_2oFEp9B12otiMMs9.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/nguyen.hieu030724",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Xuân Thắng",
+        "role": "Game Developer",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://facebook.com/xuanthangneversuy",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Phạm Thị Hồng Mai",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Pham%20Thi%20Hong%20Mai/3410914E-9464-41B6-990A-538678119000.JPG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/qWueUK6fSzaastc6/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Phạm Trung Hiếu",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Pham%20Trung%20Hieu/GBoy.jpeg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/14y8Ycry2F/?mibextid=LQQJ4d",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Tắng Lê Đình Thắng",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Tang%20Le%20Dinh%20Thang/6c222e8b6afdd7a38eec.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100051169249775&mibextid=ZbWKwL",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Trần Minh Đức Anh",
+        "role": "Game Developer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Tran%20Minh%20Duc%20Anh/1734492912094.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/tran.minh.uc.anh?mibextid=ZbWKwL",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Trần Phương Nam",
+        "role": "Game Developer",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100038407654046",
+            "icon": "facebook"
+          }
+        ]
+      }
+    ],
+    "designers": [
+      {
+        "name": "Đinh Thu Trang",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Dinh%20Thu%20Trang/IMG_6031.JPG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/186EjmwZE3/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Đinh Xuân Tài",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Dinh%20Xuan%20Tai/381203514_1540835246769180_4601368753167433049_n%20(1).jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/profile.php?id=100025281592353&mibextid=LQQJ4d&mibextid=LQQJ4d",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Đỗ Hoàng Giang",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Do%20Hoang%20Giang/IMG_3468.JPG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/giang.dohoang03/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Hoàng Ngọc Hưng",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Hoang%20Ngoc%20Hung/IMG_20241029_140229.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/Sekishinju",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Khúc Thu Minh",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Khuc%20Thu%20Minh/IMG_3393.PNG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/1CcLMEQ3JS/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Lương Hoàng Nam",
+        "role": "Game Designer",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/HagonWyvon",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Tuấn Anh",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Tuan%20Anh/IMG_20241211_195430_304.jpg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/hara.tuan.664078?mibextid=ZbWKwL",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Văn Soạn",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Nguyen%20Van%20Soan/Messenger_creation_782D5D0C-9EF5-451C-BC05-49C5E608BA13.jpeg?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/nguyen.soan.90813?mibextid=kFxxJD",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Phùng Hữu Thành",
+        "role": "Game Designer",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/huuthanh.phung.90/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Vũ Nguyễn Anh Thư",
+        "role": "Game Designer",
+        "image": "https://storage.cloud.google.com/pgdc_website/members/Vu%20Nguyen%20Anh%20Thu/IMG_6138.PNG?authuser=1",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/12Bu9Sjvcfi/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "name": "Nguyễn Thị Khánh Linh",
+        "role": "Event and Media",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/xrkhanhlinh/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Việt Anh",
+        "role": "Event and Media",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/12DHFUeyo1J/?mibextid=wwXIfr",
+            "icon": "facebook"
+          }
+        ]
+      }
+    ]
+  }
 }
