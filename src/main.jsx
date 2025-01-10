@@ -8,7 +8,7 @@ import Fallback from "./components/Fallback.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Suspense fallback={<Fallback />}>
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <App />
       </BrowserRouter>
     </Suspense>
