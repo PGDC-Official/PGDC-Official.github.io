@@ -102,7 +102,7 @@ function HomePage() {
           ></iframe>
         </section> */}
 
-        <section className="section about-us">
+        <section className="section about-us" id="about">
           <div className="section-item image-wrapper">
             <img src={carousel_5} alt="About Us" className="rounded-lg" />
           </div>
@@ -155,16 +155,14 @@ function HomePage() {
         </section>
 
         <section className="section founders">
-          <h2 className="text-dark-blue font-bold">
-            {membersData.founders.length === 1 ? "Our Leader" : "Our Leaders"}
-          </h2>
+          <h2 className="text-dark-blue font-bold">Our Leaders</h2>
           <div
             className={`section-item founders-list ${
-              membersData.founders.length === 1 ? "founders-list-center" : ""
+              membersData.founder.length === 1 ? "founders-list-center" : ""
             }`}
           >
-            {Array.from(membersData.founders).map((item, index) => (
-              <div key={index} className={`founder-item`}>
+            {Array.from(membersData.founder).map((item, index) => (
+              <div key={index} className="founder-item">
                 <Avatar
                   size={200}
                   src={item.image}
@@ -221,6 +219,84 @@ function HomePage() {
                 </div>
               </div>
             ))}
+            <Divider />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {Array.from(membersData.members.vice_presidents).map(
+                (item, index) => (
+                  <div key={index} className={`founder-item`}>
+                    <Avatar
+                      size={150}
+                      src={item.image}
+                      alt={item.name}
+                      style={{
+                        backgroundColor: "transparent",
+                        color: "#000",
+                      }}
+                      className="founder-avatar"
+                      icon={
+                        <img
+                          src={logo}
+                          alt="PGDC's member"
+                          className="member-avatar-default"
+                          style={{
+                            objectFit: "unset",
+                            width: "150px",
+                            height: "150px",
+                          }}
+                        />
+                      }
+                    />
+                    <h3 className="font-bold text-dark-blue text-xl">
+                      {item.name}
+                    </h3>
+                    <p>{item.role}</p>
+                    <div className="founder-social">
+                      {Array.from(item.links).map((link, index) => {
+                        switch (link.icon) {
+                          case "facebook":
+                            return (
+                              <Tooltip
+                                key={index}
+                                title={link.name}
+                                placement="bottom"
+                              >
+                                <a
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <RiFacebookCircleFill
+                                    size={25}
+                                    color="#0866ff"
+                                  />
+                                </a>
+                              </Tooltip>
+                            );
+                          case "github":
+                            return (
+                              <Tooltip
+                                key={index}
+                                title={link.name}
+                                placement="bottom"
+                              >
+                                <a
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <RiGithubFill size={25} color="#1f2328" />
+                                </a>
+                              </Tooltip>
+                            );
+                          default:
+                            return null;
+                        }
+                      })}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </section>
 
@@ -502,16 +578,17 @@ function HomePage() {
             otherClasses={
               "w-fit mx-auto font-bold normal-case flex items-center justify-center gap-2"
             }
-            onClick={() => {
-              navigate(PATHS.PARTNERSHIP_INFO);
-            }}
+            // onClick={() => {
+            //   navigate(PATHS.PARTNERSHIP_INFO);
+            // }}
           >
-            Partnership Information{" "}
-            <RiArrowRightLine className="inline-block" />
+            <a href="https://docs.google.com/presentation/d/e/2PACX-1vTT72TzBirHZ9URhoSEs1p3Elsru4pJNIH4cbthBbdKy-6ZtR6yqeBxY5WDJYJ_ASo3VaasAg-zCo8v/embed?start=false&loop=false&delayms=3000">
+              Partnership Information{" "}
+              <RiArrowRightLine className="inline-block" />
+            </a>
           </Button>
         </section>
       </div>
-      <input type="search" onChange={(e) => console.log(e.target.value)}/>
     </Suspense>
   );
 }

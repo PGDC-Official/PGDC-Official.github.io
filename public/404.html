@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/" />
+    <!-- <meta http-equiv="refresh" content="0;url=/" /> -->
+    <script type="text/javascript">
+    // Redirect to the correct route
+    (function () {
+      var redirectTo = window.location.pathname;
+      window.location.replace('/?' + redirectTo);
+    })();
+  </script>
   </head>
   <body>
   </body>

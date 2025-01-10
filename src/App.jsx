@@ -3,6 +3,7 @@ import {
   Routes,
   ScrollRestoration,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import { PATHS } from "./routes";
@@ -16,7 +17,9 @@ const PartnershipInfoPage = React.lazy(() =>
 function ScrollToTop() {
   const { pathname } = useLocation();
 
+  
   useEffect(() => {
+    window.history.scrollRestoration = "manual";
     window.scrollTo({
       top: 0,
       behavior: "instant"
@@ -26,6 +29,19 @@ function ScrollToTop() {
   return null;
 }
 
+const RedirectHandler = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = new URLSearchParams(window.location.search).get('');
+    if (path) {
+      navigate(path, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+};
+
 function App() {
   const location = useLocation();
 
@@ -33,9 +49,11 @@ function App() {
     Modal.destroyAll();
   }, [location]);
 
+
   return (
     <>
       <ScrollToTop />
+      <RedirectHandler />
       <Routes>
         <Route path={PATHS.HOME} element={<MainLayout />}>
           <Route index element={<HomePage />} />

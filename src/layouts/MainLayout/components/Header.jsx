@@ -36,7 +36,6 @@ function Header() {
 
   return (
     <>
-      
       <header
         className="dark"
         style={{
@@ -49,8 +48,8 @@ function Header() {
         }}
       >
         <div className="flex text-center inter text-xs text-white bg-black justify-center ">
-        ⚠️ Underconstruction Site
-      </div>
+          ⚠️ Underconstruction Site
+        </div>
         <nav className="navbar">
           <Link to={PATHS.HOME}>
             <img src={pgdcLogo} alt="Logo" className="navbar-logo" />
@@ -65,12 +64,13 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                to={PATHS.ABOUT}
+              <a
+                // to={PATHS.ABOUT}
+                href={"#about"}
                 className="text-white uppercase font-bold hover:underline"
               >
                 About
-              </Link>
+              </a>
             </li>
             <li>
               <Link
@@ -96,6 +96,7 @@ function Header() {
             styles={{
               color: "white",
               borderColor: "white",
+              boxShadow: "#fff 1px 1px 0px 0px , #fff 2px 2px 0px 0px, #fff 3px 3px 0px 0px, #fff 4px 4px 0px 0px, #fff 5px 5px 0px 0px"
             }}
           >
             <RiMenuLine size={20} />

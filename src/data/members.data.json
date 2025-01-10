@@ -1,5 +1,5 @@
 {
-  "founders": [
+  "founder": [
     {
       "name": "Trần Anh Tú",
       "role": "Founder / Game Developer",
@@ -11,58 +11,60 @@
           "icon": "facebook"
         }
       ]
-    },
-    {
-      "name": "Đoàn Thành Đạt",
-      "role": "Vice President",
-      "image": "https://storage.googleapis.com/pgdc_website/members/Doan%20Thanh%20Dat/386318338_337729748721596_1449430017717299701_n.jpg",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/dat.thanhdoan/",
-          "icon": "facebook"
-        }
-      ]
-    },
-    {
-      "name": "Trương Quang Vinh",
-      "role": "Vice President",
-      "image": "https://storage.googleapis.com/pgdc_website/members/Truong%20Quang%20Vinh/313435534_3204152333159649_6047279351574533938_n.jpg",
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/truongvinh0912/",
-          "icon": "facebook"
-        }
-      ]
-    },
-    {
-      "name": "Nguyễn Bá Việt Hoàng",
-      "role": "Vice President",
-      "image": null,
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/share/1BH1ExvwCU/",
-          "icon": "facebook"
-        }
-      ]
-    },
-    {
-      "name": "Nguyễn Thành Đạt",
-      "role": "Vice President",
-      "image": null,
-      "links": [
-        {
-          "name": "Facebook",
-          "url": "https://www.facebook.com/thanh.at.413707?mibextid=ZbWKwL",
-          "icon": "facebook"
-        }
-      ]
     }
   ],
 
   "members": {
+    "vice_presidents": [
+      {
+        "name": "Đoàn Thành Đạt",
+        "role": "Vice President",
+        "image": "https://storage.googleapis.com/pgdc_website/members/Doan%20Thanh%20Dat/386318338_337729748721596_1449430017717299701_n.jpg",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/dat.thanhdoan/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Trương Quang Vinh",
+        "role": "Vice President",
+        "image": "https://storage.googleapis.com/pgdc_website/members/Truong%20Quang%20Vinh/313435534_3204152333159649_6047279351574533938_n.jpg",
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/truongvinh0912/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Bá Việt Hoàng",
+        "role": "Vice President",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/share/1BH1ExvwCU/",
+            "icon": "facebook"
+          }
+        ]
+      },
+      {
+        "name": "Nguyễn Thành Đạt",
+        "role": "Vice President",
+        "image": null,
+        "links": [
+          {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/thanh.at.413707?mibextid=ZbWKwL",
+            "icon": "facebook"
+          }
+        ]
+      }
+    ],
     "developers": [
       {
         "name": "Đào Duy Thắng",

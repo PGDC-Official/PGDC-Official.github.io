@@ -13,13 +13,13 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  transition: box-shadow 0.2s ease-in-out;
-}
-
-.button-54:hover {
   box-shadow: #0A1A51 1px 1px 0px 0px , #0A1A51 2px 2px 0px 0px, #0A1A51 3px 3px 0px 0px, #0A1A51 4px 4px 0px 0px, #0A1A51 5px 5px 0px 0px;
   transition: box-shadow 0.2s ease-in-out;
 }
+
+// .button-54:hover {
+  
+// }
 
 .button-54:active {
   box-shadow: 0px 0px 0px 0px;
