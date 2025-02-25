@@ -96,7 +96,7 @@ export default function Home() {
                 key={index}
                 className="mt-4 flex flex-col justify-center items-center"
               >
-                <Avatar className="w-[180px] h-[180px] mb-4">
+                <Avatar className="w-[250px] h-[250px] mb-4">
                   <AvatarImage src={item.avatar} alt={item.name} />
                   <AvatarFallback>
                     <Image
