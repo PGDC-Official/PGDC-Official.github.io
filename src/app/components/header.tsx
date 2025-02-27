@@ -10,14 +10,14 @@ const Header = () => {
           <Image src={"/logo_colored_lg.svg"} alt="logo" width={50} height={50} />
         </Link>
 
-        <ul className="flex space-x-4">
-          <li>
-            <Link href="#about">About</Link>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div className="flex space-x-4">
+          <Link href="#about" className="p-2 hover:bg-gray-100 bg-transparent transition rounded-md cursor-pointer hover:border hover:border-gray-200 border border-transparent">
+            <span className="font-semibold text-blue">About</span>
+          </Link>
+          <Link href="#contact" className="p-2 hover:bg-gray-100 bg-transparent transition rounded-md cursor-pointer hover:border hover:border-gray-200 border border-transparent">
+            <span className="font-semibold text-blue">Contact</span>
+          </Link>
+        </div>
       </nav>
     </header>
   );

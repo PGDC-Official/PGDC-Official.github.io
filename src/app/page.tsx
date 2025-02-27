@@ -5,7 +5,7 @@ import "@/app/ui/styles/pages/home.scss";
 import { activites, carouselData, members, partners } from "./data";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
-import { FaFacebook } from "react-icons/fa";
+import { FaArrowRight, FaFacebook } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "Phenikaa Game Development Club",
@@ -96,7 +96,8 @@ export default function Home() {
                 key={index}
                 className="mt-4 flex flex-col justify-center items-center"
               >
-                <Avatar className="w-[250px] h-[250px] mb-4">
+                <Avatar className="
+                  sm:w-[150px] sm:h-[150px] lg:w-[250px] lg:h-[250px] mb-4">
                   <AvatarImage src={item.avatar} alt={item.name} />
                   <AvatarFallback>
                     <Image
@@ -127,7 +128,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col w-full px-4 py-8 gap-8">
+        <section className="flex flex-col w-full px-4 py-8 gap-8" id="contact">
           <h1 className="text-5xl font-bold text-left text-blue">Partners</h1>
           <div className="grid grid-cols-4 gap-8 mt-4 items-center justify-items-center">
             {partners.map((item, index) => (
@@ -146,9 +147,10 @@ export default function Home() {
           <a
             href="https://docs.google.com/presentation/d/e/2PACX-1vTT72TzBirHZ9URhoSEs1p3Elsru4pJNIH4cbthBbdKy-6ZtR6yqeBxY5WDJYJ_ASo3VaasAg-zCo8v/embed?start=false&loop=false&delayms=3000&slide=id.p"
             target="_blank"
-            className="text-center"
+            className="text-center button-54 mx-auto flex items-center gap-2"
           >
             Partnership information
+            <FaArrowRight />
           </a>
         </section>
 
@@ -173,9 +175,10 @@ export default function Home() {
           <a
             href="https://docs.google.com/presentation/d/e/2PACX-1vTT72TzBirHZ9URhoSEs1p3Elsru4pJNIH4cbthBbdKy-6ZtR6yqeBxY5WDJYJ_ASo3VaasAg-zCo8v/embed?start=false&loop=false&delayms=3000&slide=id.p"
             target="_blank"
-            className="text-center"
+            className="text-center button-54 mx-auto flex items-center gap-2"
           >
             Join us!
+            <FaArrowRight />
           </a>
         </section>
       </div>

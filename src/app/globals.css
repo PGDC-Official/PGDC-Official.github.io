@@ -128,6 +128,32 @@
   color: #f8843d;
 }
 
+.button-54 {
+  font-family: Roboto Mono,system-ui,Avenir,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0a1a51;
+  cursor: pointer;
+  border: 3px solid #0A1A51;
+  padding: .25em .5em;
+  position: relative;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: #0a1a51 1px 1px,#0a1a51 2px 2px,#0a1a51 3px 3px,#0a1a51 4px 4px,#0a1a51 5px 5px;
+  transition: box-shadow .2s ease-in-out;
+  width: fit-content;
+}
+
+.button-54:active {
+  box-shadow: 0 0;
+  top: 5px;
+  left: 5px;
+}
+
 /*
   scroll padding top
 */
