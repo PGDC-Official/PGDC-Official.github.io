@@ -224,7 +224,7 @@ function HomePage() {
               {Array.from(membersData.members.vice_presidents).map(
                 (item, index) => (
                   <div key={index} className={`founder-item`}>
-                    <Avatar
+                    {/* <Avatar
                       size={150}
                       src={item.image}
                       alt={item.name}
@@ -234,17 +234,18 @@ function HomePage() {
                       }}
                       className="founder-avatar"
                       icon={
-                        <img
-                          src={logo}
-                          alt="PGDC's member"
-                          className="member-avatar-default"
-                          style={{
-                            objectFit: "unset",
-                            width: "150px",
-                            height: "150px",
-                          }}
-                        />
+                        
                       }
+                    /> */}
+                    <img
+                      src={logo}
+                      alt="PGDC's member"
+                      className="member-avatar-default"
+                      style={{
+                        objectFit: "unset",
+                        width: "150px",
+                        height: "150px",
+                      }}
                     />
                     <h3 className="font-bold text-dark-blue text-xl">
                       {item.name}
@@ -362,7 +363,7 @@ function HomePage() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                <Avatar
+                                {/* <Avatar
                                   key={index}
                                   src={item.image}
                                   className="member-avatar"
@@ -371,13 +372,18 @@ function HomePage() {
                                     color: "#000",
                                   }}
                                   icon={
-                                    <img
-                                      src={logo}
-                                      alt="PGDC's member"
-                                      className="member-avatar-default"
-                                      style={{ objectFit: "unset" }}
-                                    />
+                                    
                                   }
+                                /> */}
+                                <img
+                                  src={logo}
+                                  alt="PGDC's member"
+                                  className="member-avatar-default"
+                                  style={{
+                                    objectFit: "unset",
+                                    width: "150px",
+                                    height: "150px",
+                                  }}
                                 />
                               </a>
                             </Tooltip>
@@ -435,7 +441,7 @@ function HomePage() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                <Avatar
+                                {/* <Avatar
                                   key={index}
                                   src={item.image}
                                   className="member-avatar"
@@ -444,16 +450,17 @@ function HomePage() {
                                     color: "#000",
                                   }}
                                   icon={
-                                    <img
-                                      src={logo}
-                                      alt="PGDC's member"
-                                      className="member-avatar-default"
-                                      style={{
-                                        objectFit: "unset",
-                                        overflow: "auto",
-                                      }}
-                                    />
                                   }
+                                /> */}
+                                <img
+                                  src={logo}
+                                  alt="PGDC's member"
+                                  className="member-avatar-default"
+                                  style={{
+                                    objectFit: "unset",
+                                    width: "150px",
+                                    height: "150px",
+                                  }}
                                 />
                               </a>
                             </Tooltip>
@@ -509,7 +516,7 @@ function HomePage() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                <Avatar
+                                {/* <Avatar
                                   key={index}
                                   src={item.image}
                                   className="member-avatar"
@@ -518,14 +525,18 @@ function HomePage() {
                                     color: "#000",
                                   }}
                                   icon={
-                                    <img
-                                      src={logo}
-                                      alt="PGDC's member"
-                                      style={{ objectFit: "unset" }}
-                                      className="member-avatar-default"
-                                    />
                                   }
-                                />
+                                /> */}
+                                  <img
+                                    src={logo}
+                                    alt="PGDC's member"
+                                    style={{
+                                      objectFit: "unset",
+                                      width: "150px",
+                                      height: "150px",
+                                    }}
+                                    className="member-avatar-default"
+                                  />
                               </a>
                             </Tooltip>
                             <h3 className="font-bold text-dark-blue">
